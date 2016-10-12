@@ -1,0 +1,19 @@
+
+<h2>Home</h2>
+<form ng-submit="controller.addMessage()">
+  <div class="form-group">
+    <label>FirstName</label>
+    <input class="form-control" ng-model="controller.newMessage.firstName">
+  </div>
+  <div class="form-group">
+    <label>lastName</label>
+    <input class="form-control" ng-model="controller.newMessage.lastName">
+  </div>
+  <button class="btn btn-primary">Create Message</button>
+</form>
+{{controller.Amessage}}
+<ul>
+    <li ng-repeat="message in controller.messages">
+        {{message.firstName}} {{message.lastName}} {{message.title}}
+    </li>
+</ul>
